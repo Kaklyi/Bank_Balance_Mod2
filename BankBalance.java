@@ -20,7 +20,7 @@ public class BankBalance extends JFrame implements ActionListener {
         history.add("Starting Balance: $" + startingBalance);
 
         // Window
-        setTitle("My Cute Bank App");
+        setTitle("Bank App");
         setSize(350, 260);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -40,9 +40,9 @@ public class BankBalance extends JFrame implements ActionListener {
         panel.add(Box.createRigidArea(new Dimension(0, 15)));
 
         // Buttons
-        depositBtn = createCuteButton("Deposit", new Color(200, 255, 200)); // mint
-        withdrawBtn = createCuteButton("Withdraw", new Color(255, 210, 210)); // pink
-        showBtn = createCuteButton("Show Balance", new Color(210, 230, 255)); // blue
+        depositBtn = createButton("Deposit", new Color(200, 255, 200)); // mint
+        withdrawBtn = createButton("Withdraw", new Color(255, 210, 210)); // pink
+        showBtn = createButton("Show Balance", new Color(210, 230, 255)); // blue
 
         // listeners
         depositBtn.addActionListener(this);
@@ -61,7 +61,7 @@ public class BankBalance extends JFrame implements ActionListener {
     }
 
     // style buttons
-    private JButton createCuteButton(String text, Color color) {
+    private JButton createButton(String text, Color color) {
         JButton btn = new JButton(text);
         btn.setBackground(color);
         btn.setFocusPainted(false);
